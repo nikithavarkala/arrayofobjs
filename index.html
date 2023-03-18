@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h2>Js-Handson</h2>
+    <p>&cir; Array of Objects</p>
+    <p>Data:</p>
+    <pre>
+    let sr=[{name:'john',id:123,marks:98},
+            {name:'Baba',id:101,marks:23},
+            {name:'yaga',id:200,marks:45},
+            {name:'Wick',id:115,marks:75}]
+    </pre>
+    <h3>Retriving only the students names and all student names should be in caps.</h3>
+    <pre>
+    let res=[];
+    for(let i=0;i< sr.length;i++){
+        res.push(sr[i].name.toUpperCase());    
+    }
+    console.log(res);
+    </pre>
+    <h3>fetching the records of the students who scored more than 50.</h3>
+    <pre>
+    let res=[];
+    for(let i=0;i< sr.length;i++){
+        if(sr[i].marks>50){
+            res.push(sr[i]);     
+        }
+    }
+    console.log(res);
+    </pre>
+    <h3>fetching the records of the students who scored more than 50 and id is greater than 150.</h3>
+    <pre>
+        let res=[];
+    for(let i=0;i< sr.length;i++){
+        if(sr[i].marks>50 && sr[i].id>120){
+            res.push(sr[i]);     
+        }
+    }
+    console.log(res);   
+    </pre>
+    <h3>Total marks of the students.</h3>
+    <pre>
+    let sum=0;
+    for(let i=0;i< sr.length;i++){
+        sum+=sr[i].marks;
+    }
+    console.log(sum);
+    </pre>
+    <h3>Name of the students who scored more than 50.</h3>
+    <pre>
+        let res=[];
+    for(let i=0;i< sr.length;i++){
+        if(sr[i].marks>50){
+            res.push(sr[i].name);
+        }
+    }
+    console.log(res);
+    </pre>
+    <h3>Sum of marks of the students with id more than 120.</h3>
+    <pre>
+    let sum=0;
+    for(let i=0;i< sr.length;i++){
+        if(sr[i].id>120){
+            sum+=sr[i].marks;
+        }
+    }
+    console.log(sum);
+    </pre>
+    <h3>Total marks of students with greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.</h3>
+    <pre>
+    let sum=0;
+    for(let i=0;i< sr.length;i++){
+        if(sr[i].marks< 50){
+            sr[i].marks+=15;
+            if(sr[i].marks>50){
+                sum+=sr[i].marks;
+            }
+        }
+        else if(sr[i].marks>50){
+            sum+=sr[i].marks;
+        }
+    }
+    console.log(sum);
+    </pre>
+    <h3>Creating 6 objects ,each object will have name,class,rollno, as properties. Store these objects in an arrya of objects.</h3>
+    <pre>
+let arr=[{name:'shaik',rollno:154,class:5},
+         {name:'Baba',rollno:101,class:2},
+         {name:'Wick',rollno:200,class:4},
+         {name:'yaga',rollno:115,class:7},
+         {name:'xyz',rollno:132,class:4},
+         {name:'john',rollno:123,class:6}
+       ]
+console.log(arr);
+<h2>or</h1>
+let ob1={name:'shaik',rollno:154,class:5};
+let ob2={name:'Baba',rollno:101,class:2};
+let ob3={name:'Wick',rollno:200,class:4};
+let ob4={name:'yaga',rollno:115,class:7};
+let ob5={name:'xyz',rollno:132,class:4};
+let ob6={name:'john',rollno:123,class:6};
+let arr=[];
+arr.push(ob1);
+arr.push(ob2);
+arr.push(ob3);
+arr.push(ob4);
+arr.push(ob5);
+arr.push(ob6);
+console.log(arr);
+    </pre>
+</body>
+</html>
